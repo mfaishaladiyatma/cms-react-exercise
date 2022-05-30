@@ -14,8 +14,8 @@ function App() {
           <Route path='/'>
             <Route index element={<Login />} ></Route>
             <Route element={<ProtectedRoute />}>
-              <Route path='cms' element={<Cms />}></Route>
             </Route>
+              <Route path='cms' element={<Cms />}></Route>
             <Route path='userPage' element={<UserPage />}></Route>
           </Route>
         </Routes>

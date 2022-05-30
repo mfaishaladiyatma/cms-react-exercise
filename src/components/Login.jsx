@@ -9,6 +9,8 @@ function Login() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
+    const munculEmail = useSelector((state) => state)
+
     const dispatch = useDispatch()
 
     const handlePassword = () => {
@@ -23,8 +25,13 @@ function Login() {
         console.log(password, '<<<password')
         dispatch(setInputEmail(email))
         dispatch(setInputPassword(password))
-
         handlePassword()
+        console.log(munculEmail, '<<<munculEmail')
+        // if (email === 'admin' && password === 'admin123') {
+        //     return(
+        //         <Navigate to='/cms' />
+        //     )
+        // }
         
     }
 

@@ -1,8 +1,8 @@
 import React from 'react'
 
 const initialState = {
-    username: '',
-    // password: '',
+    email: '',
+    password: '',
 }
 
 export default function reducer(state = initialState, action) {
@@ -10,14 +10,14 @@ export default function reducer(state = initialState, action) {
 
     switch (type) {
         case 'SET_INPUT_EMAIL':
+            console.log(state)
+            console.log(action.payload)
             return {
-                ...state,
-                ...payload
+                email : action.payload
             }
         case 'SET_INPUT_PASSWORD':
             return {
-                ...state,
-                ...payload
+                password: action.payload
             }
         default:
             return state

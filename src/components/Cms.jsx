@@ -4,6 +4,8 @@ import cars from '../image/Administrator.png'
 import menu from '../image/fi_menu.svg'
 import arrowDown from '../image/fi_chevron-down.svg'
 
+import { useState } from 'react'
+
 function Cms() {
     const people = [
         {
@@ -62,6 +64,13 @@ function Cms() {
         },
     ]
 
+    const [clickMenu, setClickMenu] = useState(false)
+
+    const handleClickMenu = () => {
+        
+        setClickMenu(!clickMenu)
+    }
+
     const tableData = () => {
         const row = []
         for (let i = 1; i < 5; i++) {
@@ -92,14 +101,13 @@ function Cms() {
     return (
         <>
             <div className="wrapper-admin flex flex-row">
-                <div className='flex flex-col w-screen-30 h-screen-200 '>
-
+                <div className= {`${!clickMenu ? 'hidden ' : 'flex '} flex-col w-screen-30 h-screen-200`}>
                     <div className='flex flex-col h-screen  font-helvetica '>
                         <div className='h-[70px]  flex'>
-                            <div className='flex items-center justify-center w-[100px] bg-background-blue-car'>
+                            <nav className='flex justify-center w-[100px] items-center  bg-background-blue-car'>
                                 <div className='bg-slate-400 w-[40px] h-[40px]'></div>
-                            </div>
-                            <div className='flex items-center  min-w-[100px]'>
+                            </nav>
+                            <div className='flex items-center w-[320px]  min-w-[100px]'>
                                 <div className='font-bold px-3'><p>Binarian</p></div>
                             </div>
                         </div>
@@ -127,10 +135,10 @@ function Cms() {
                     </div>
 
                 </div>
-                <div className='flex flex-col w-screen-70 h-screen-200 border-2 border-yellow-600 font-helvetica'>
+                <div className='flex flex-col w-screen-70 h-screen-200  font-helvetica'>
                     <div className='flex justify-between px-5  h-[100px]'>
                         <div className='flex'>
-                            <button>
+                            <button onClick={handleClickMenu}>
                                 <img src={menu} alt="" />
                             </button>
                         </div>
@@ -228,7 +236,7 @@ function Cms() {
                             </div>
                         </nav>
                     </div>
-                    <div className='border-2 border-sky-800 h-screen'></div>
+                    <div className=' h-screen'></div>
                 </div>
             </div>
         </>

@@ -6,11 +6,12 @@ export default function ProtectedRoute() {
     const { username, password } = useSelector((state) => state)
     // const isLoggedIn = username && password
 
-    console.log(username)
+    console.log(password)
 
-  if (username === 'admin' && password === 'admin123') {
+  if (username === '' && password === '') {
       return <Outlet />
   }
+
 
   return <Navigate to={'/'} />
 }
