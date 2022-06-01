@@ -226,7 +226,7 @@ function Cms() {
                                 </div>
                             </div>
                             <div className='flex flex-row'>
-                                <div className='border text-slate-400 border-slate-400 h-[30px] rounded-[3px] min-w-[30px]  items-center justify-center flex' items-center>&lt;&lt;</div>
+                                <div className='border text-slate-400 border-slate-400 h-[30px] rounded-[3px] min-w-[30px]  items-center justify-center flex'>&lt;&lt;</div>
                                 <div className='border text-slate-400 border-slate-400 h-[30px] rounded-[3px]  min-w-[30px] justify-center flex items-center'>1</div>
                                 <div className='border text-slate-400 border-slate-400 h-[30px] rounded-[3px]  min-w-[30px] justify-center flex items-center'>2</div>
                                 <div className='border text-slate-400 border-slate-400 h-[30px] rounded-[3px]  min-w-[30px] justify-center flex items-center'>3</div>

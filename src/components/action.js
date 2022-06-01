@@ -8,7 +8,13 @@ const setInputPassword = (input) => ({
     payload: input
 })
 
+const setLogin = (email, password) => ({
+    type: 'SET_LOGIN',
+    payload: {email, password}
+})
+
 export {
     setInputEmail,
-    setInputPassword
+    setInputPassword,
+    setLogin
 }
